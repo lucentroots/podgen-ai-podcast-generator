@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+.venv/
+
+# Environment variables - IMPORTANT: Keep API keys secure
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Audio output files (generated)
+backend/audio_output/*.mp3
+backend/audio_output/*.wav
+*.mp3
+*.wav
+podcast_script.txt
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+.pytest_cache/
+
+# Temporary/utility files
+update_notebook.py
+*.bak
+*.tmp
+
+# Vite cache
+.vite/
