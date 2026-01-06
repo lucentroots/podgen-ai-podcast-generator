@@ -1,4 +1,4 @@
-# 🎙️ Podcast Creator Application
+# 🎙️ Podgen - AI Podcast generator
 
 A full-stack application that creates natural, conversational podcasts from Wikipedia articles, web searches, or uploaded content. Features Hinglish (Hindi-English) and Tamil-English conversations with natural interruptions and code-switching.
 
