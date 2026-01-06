@@ -178,7 +178,7 @@ Feel free to submit issues or pull requests!
 
 ## 📄 License
 
-This project is open source and available for personal and commercial use.
+This project is for personal use only.
 
 ---
 
