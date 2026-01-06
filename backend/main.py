@@ -246,7 +246,7 @@ async def upload_content(file: UploadFile = File(...)):
     try:
         content = await file.read()
         try:
-            text_content = content.decode('utf-8')
+        text_content = content.decode('utf-8')
         except:
             text_content = content.decode('latin-1')
         return {
@@ -364,16 +364,16 @@ Return ONLY valid JSON:
 
 P1 = Priya (Female), P2 = Arjun (Male)"""
 
-        response = groq_client.chat.completions.create(
+                response = groq_client.chat.completions.create(
             model="llama-3.1-8b-instant",
-            messages=[
+                    messages=[
                 {"role": "system", "content": "You are a professional podcast scriptwriter. Create conversations between Priya (female, P1) and Arjun (male, P2). They must alternate speaking. Respond with valid JSON only."},
-                {"role": "user", "content": prompt}
-            ],
+                        {"role": "user", "content": prompt}
+                    ],
             temperature=0.7,
-            max_tokens=3000,
-            response_format={"type": "json_object"}
-        )
+                    max_tokens=3000,
+                    response_format={"type": "json_object"}
+                )
         
         result = json.loads(response.choices[0].message.content)
         
@@ -473,7 +473,7 @@ async def generate_audio(request: AudioRequest):
                 continue
             
             audio_segment = await generate_edge_tts_audio(text, speaker, i, p1_voice, p2_voice)
-            audio_files.append(audio_segment)
+                audio_files.append(audio_segment)
         
         # Combine audio files
         combined_audio_url = None
@@ -512,8 +512,20 @@ async def generate_audio(request: AudioRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/")
+async def root():
+    """Root endpoint for health checks and service discovery"""
+    return {
+        "name": "PodGen API",
+        "status": "healthy",
+        "version": "3.0.0",
+        "docs": "/docs"
+    }
+
+
 @app.get("/api/health")
 async def health_check():
+    """Detailed health check endpoint"""
     return {
         "status": "healthy",
         "version": "3.0.0",
