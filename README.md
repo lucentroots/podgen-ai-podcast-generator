@@ -86,7 +86,7 @@ npm run dev
 
 ## 📍 Access Points
 
-- **Frontend UI**: http://localhost:5173
+- **Frontend UI**: http://localhost:5176
 - **Backend API**: http://localhost:8000
 - **API Documentation**: http://localhost:8000/docs
 
